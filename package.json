@@ -1,0 +1,31 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "migrate": "knex migrate:latest --knexfile ./knexfile.cjs",
+  "rollback": "knex migrate:rollback --knexfile ./knexfile.cjs",
+  "migrate:status": "knex migrate:status --knexfile ./knexfile.cjs",
+   "migrate:programmatic": "node ./scripts/runMigrations.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@feathersjs/express": "^5.0.34",
+    "@feathersjs/feathers": "^5.0.34",
+    "@feathersjs/knex": "^5.0.34",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "knex": "^3.1.0",
+    "nodemon": "^3.1.10"
+  }
+}
